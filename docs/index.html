@@ -7,11 +7,11 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <style>
 #dashboard{
-        font-size: xx-large;
-        padding: 100px;
+        font-size: x-large;
+        padding: 100px 0px;
         display: none;
         border: 4px solid rgb(72,190,194);
-    
+        text-align: center;
       }
     #cards{
       color: whitesmoke;
@@ -206,9 +206,14 @@ h3{
     
      
     $(document).ready(function(){
-     $("#login").on({
+      $("#login").on({
        click: function(){
          window.location.href="https://black-devil963.github.io/logins/index.html?v=in";
+       }
+     });
+     $("#logout").on({
+       click: function(){
+         window.location.href="https://black-devil963.github.io";
        }
      });
      $("#regis").on({
@@ -243,6 +248,7 @@ h3{
       
       <a class="ACADEMICYEAR" style="color: white;margin-left: 30px;font-weight: bold;">ACADEMIC YEAR &nbsp;&nbsp;&nbsp;2021-2022</a>
       <a class="navbar" id="login">LOGIN</a>
+      <a class="navbar" id="logout" style="left:-5px">LOGOUT</a>
     <a class="navbar" id="about" style="left:70px">ABOUT US</a>
     <a class="navbar" href="#contactus" style="left:170px">CONTACT US</a>
     <a class="navbar" id="regis" style="left:290px">NEW REGISTRATION</a> 
@@ -253,7 +259,7 @@ h3{
     </div>
     <div style="background-color: white;height:fit-content;margin-top: 110px;padding-top:5px ;padding-bottom: 5px;text-align: center;">
         Please check the Announcement corner regularly for latest updates and information.<br>
-        For any technical queries, please contact Helpdesk at <span style="color:red"> helpdesk[at]nsp[dot]gov[dot]in </span> or <span style="color:red">  0120 - 6619540</span><br>
+        For any technical queries, please contact <span style="color:red">Helpdesk </span>  as per contact section<br>
         <span style="color:blue"> (from 8 AM to 8 PM on all days, excluding holidays)</span>
     </div>
     <div style="height:580px">
@@ -306,9 +312,14 @@ h3{
 <apps-root></apps-root>
 <div id="contactus">
   <p>Author: Nikhil Kumar Aman<br>
-    <a href="mailto:hege@example.com">NikhilKumarAman26@gmail.com</a></p>
+    (click to view details)
+    </p>
   </div>
-  <div id="dashboard"></div>
+  <div id="dashboard">
+    Mail:<a href="mailto:hege@example.com">NikhilKumarAman26@gmail.com</a><br>
+      Contact Number : 8540040468
+    
+  </div>
   
 </div>
 
@@ -322,6 +333,12 @@ h3{
           3)Contact us          
  </pre>
 </footer>
+<script>
+  var a = new URLSearchParams(location.search);
+  var a=a.get('v');
+  if(a=="logout")document.getElementById("login").style.display="none";
+  else document.getElementById("logout").style.display="none";
+</script>
 <script src="runtime.4c11cec1a4ed0192.js" type="module"></script><script src="polyfills.75e1369c732a8c0f.js" type="module"></script><script src="main.b00fc93f413539a0.js" type="module"></script>
 
 </body></html>
