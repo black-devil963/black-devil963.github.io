@@ -9,7 +9,13 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
   crossorigin="anonymous">
   <style>
-
+#dashboard{
+        font-size: xx-large;
+        padding: 100px;
+        display: none;
+        border: 4px solid rgb(72,190,194);
+    
+      }
     #cards{
       color: whitesmoke;
       background-color: #11acb5;
@@ -134,7 +140,7 @@ h3{
     }
     
   }
-  @media screen and (max-width:400px){
+  @media screen and (max-width:500px){
     #screen{
      display: none;
     }
@@ -200,6 +206,7 @@ h3{
     </style>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script>
+    
    $(document).ready(function(){
      $("#login").on({
        click: function(){
@@ -217,6 +224,18 @@ h3{
          window.location.href="https://riyapat.github.io/about-us/";
        }
      });
+     $("#contactus").click(function(){
+      
+        // here use slideup or slideDown
+        $("#dashboard").slideToggle("slow");
+        var a=0;
+        var scrollInterval = setInterval(function() { 
+          ++a;
+    document.documentElement.scrollTop = document.documentElement.scrollHeight;
+    if(a>=15)clearInterval(scrollInterval); 
+}, 50);
+
+      });
    });
    </script> 
   </head>
@@ -292,6 +311,8 @@ h3{
   <p>Author: Nikhil Kumar Aman<br>
     <a href="mailto:hege@example.com">NikhilKumarAman26@gmail.com</a></p>
   </div>
+  <div id="dashboard"></div>
+  
 </div>
 
 <footer  hidden >
