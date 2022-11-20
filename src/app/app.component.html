@@ -90,9 +90,9 @@ button{
 </div>
 <div *ngFor='let ins of [1,2,3,4,5,6,7];'>
   <div *ngIf="division==ins">
-  <div  style="color: whitesmoke;font-size: 24px;background:url('https://assets.embibe.com/production/web-assets/assets/images/ParentLandingPage/parent_bg.jpg');white-space:pre-wrap;height:fit-content;width: 99%;position: relative;padding-left: 15px;padding-top: 10px;">
-    <h1 style="text-align: center;"><u>{{details[ins-1]}}</u></h1>
-    <button (click)="linkage(-1)" style="position: absolute;top:10px;right: 15px;background-color: skyblue;border-radius: 30px;width: fit-content;height:  fit-content;margin: 0px;padding: 0px;"><img  src="https://img.icons8.com/fluency/48/000000/circled-left-2.png"></button>
+  <div  style="font-size: 24px;white-space:pre-wrap;height:fit-content;width: 99%;position: relative;padding-left: 15px;padding-top: 10px;">
+    <h1 style="text-align: center;"><u>{{details[ins-1]}}</u><button (click)="linkage(-1)" style="position: relative;top:3px;left: 10px;background-color: skyblue;border-radius: 50px;width: fit-content;height:  fit-content;padding: 5px;"><img  src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/35/null/external-backwards-arrows-kmg-design-outline-color-kmg-design.png"></button></h1>
+    
     <br>
     {{record[ins-1].para1}}
     <br><br>
